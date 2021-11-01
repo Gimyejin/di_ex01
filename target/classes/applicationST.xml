@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <jsp:useBean id="변수명" class="경로"/> 했던거랑 똑같음 -->
+	<bean id="st01" class="com.care.root02.Student" />
+	<bean id="stb" class="com.care.root02.STBean">
+		<property name="st" ref="st01"></property>
+		<!-- setter가 있어야 property를 쓸 수 있음 이렇게 연결해서 객체를 만듬 // ref가 연결한다는 것 -->
+		
+		<property name="name">
+			<value>홍개똥</value>
+		</property>
+		<property name="age" value="2222"/>
+	</bean>
+
+	<!-- Student st01 = new Student(); 
+	STBean stBean = new STBean(); 
+	stBean.setSt(st01); -->
+</beans>
